@@ -333,7 +333,7 @@
             </div>
             <hr class="border-dashed lg:my-4 my-1">
             <!-- Seats -->
-            <div class="grid grid-cols-10 text-center gap-4 ">
+            <div class="grid grid-cols-10 text-center gap-4 " id="seatsContainer">
               <!-- driver -->
               <div class="col-span-8"></div>
               <div
@@ -524,7 +524,7 @@
             <!-- table  -->
             <div
               class="bg-[#F7F8F8] lg:px-6 px-1 rounded-xl space-y-4 py-3 lg:py-6">
-              <table class="table border-b-2 border-dashed font-inter">
+              <table class="table border-b-2 border-dashed font-inter" >
                 <thead class="font-medium lg:text-xl">
                   <tr>
                     <th>Seat <sup id="sup"
@@ -533,22 +533,9 @@
                     <th class="text-right">Price</th>
                   </tr>
                 </thead>
-                <tbody class="text-[#03071299] lg:text-xl font-medium"
-                  id="max-4">
-                  <!-- row 1 -->
-                  <tr>
-
-                    <td>C2</td>
-                    <td>Economy</td>
-                    <td class="text-right">550</td>
-                  </tr>
-                  <!-- row 2 -->
-                  <tr>
-
-                    <td>E1</td>
-                    <td>Business</td>
-                    <td class="text-right">1150</td>
-                  </tr>
+                <tbody class="text-[#03071299] lg:text-xl font-medium "
+                  id="table">
+                  
                 </tbody>
               </table>
               <!-- table end  -->
@@ -559,9 +546,15 @@
                 <p>BDT <span id="total">00</span></p>
 
               </div>
-              <div class="p-2 bg-white rounded-lg">
+              <div
+                class="flex justify-between font-inter font-medium lg:text-xl px-4 hidden" id="discountContainer">
+                <p>Discount</p>
+                <p>BDT <span id="discount">00</span></p>
+
+              </div>
+              <div class="p-2 bg-white rounded-lg" id="cpnContainer">
                 <div class="flex justify-between gap-1">
-                  <input class="font-inter flex-1 rounded-md" id="coupon"
+                  <input class="font-inter flex-1 rounded-md" id="coupon" type="text"
                     placeholder="Have any copupon?" />
                   <button
                     class="btn text-white font-inter font-semibold rounded-lg bg-[#1DD100]"
@@ -583,10 +576,10 @@
 
               <label for>Passenger Name*</label> <br>
               <input type="text" placeholder="Enter your name"
-                class="input input-bordered w-full " required id="phone" /><br>
+                class="input input-bordered w-full "  required  /><br>
               <label for>Phone Number*</label> <br>
               <input type="text" placeholder="Enter your phone number"
-                class="input input-bordered w-full " required /><br>
+                class="input input-bordered w-full " id="phone" required /><br>
               <label for>Email ID</label> <br>
               <input type="text" placeholder="Enter your email id"
                 class="input input-bordered w-full " /><br>
@@ -628,7 +621,7 @@
         <div class="modal-action">
           <form method="dialog" class="w-1/2 mx-auto">
             <!-- if there is a button in form, it will close the modal -->
-            <button
+            <button onclick="refresh()"
               class="btn w-full rounded-2xl  text-white bg-[#27AE60]"
               id="continue">Continue</button>
           </form>
@@ -636,5 +629,7 @@
       </div>
     </dialog>
 
+    <!-- script -->
+    <script src="./functions.js"></script>
   </body>
 </html>
