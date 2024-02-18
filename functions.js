@@ -114,10 +114,6 @@ phone.addEventListener('input', function () {
     
 });
 
-function refresh()
-{
-   location.reload();
-   phone.value='';
-}
+
 
 

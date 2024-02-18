@@ -209,10 +209,7 @@
         <h1 class="lg:text-4xl text-2xl font-bold font-raleway">M.M.
           Paribahan</h1>
         <p
-          class="font-inter text-[#03071299]  max-w-lg mx-auto my-2 lg:my-6">Yes,
-          you can run unit tests and view
-          the results directly within the app. The integrated testing features
-          allow for a streamlined .</p>
+          class="font-inter text-[#03071299] text-xl  max-w-lg mx-auto my-2 lg:my-6">Effortless Ticket Purchasing: Test and Track Your Bookings Instantly!</p>
 
         <!-- details  -->
         <div
@@ -309,7 +306,7 @@
       <!-- select seat section  -->
       <section class="container mx-auto mt-2 lg:mt-6">
         <div
-          class="flex flex-col gap-3 lg:gap-0 lg:flex-row md:flex-row mx-auto  bg-white  rounded-2xl w-[97%] p-2 lg:p-6">
+          class="flex flex-col gap-3 lg:gap-0 lg:flex-row md:flex-row mx-auto  bg-white  rounded-2xl w-[97%] lg:w-full p-2 lg:p-6">
 
           <!-- available -->
           <div class="lg:w-[60%] md:w-[60%] pr-1 lg:pr-4">
@@ -333,7 +330,8 @@
             </div>
             <hr class="border-dashed lg:my-4 my-1">
             <!-- Seats -->
-            <div class="grid grid-cols-10 text-center gap-4 " id="seatsContainer">
+            <div class="grid grid-cols-10 text-center gap-4 "
+              id="seatsContainer">
               <!-- driver -->
               <div class="col-span-8"></div>
               <div
@@ -524,7 +522,7 @@
             <!-- table  -->
             <div
               class="bg-[#F7F8F8] lg:px-6 px-1 rounded-xl space-y-4 py-3 lg:py-6">
-              <table class="table border-b-2 border-dashed font-inter" >
+              <table class="table border-b-2 border-dashed font-inter">
                 <thead class="font-medium lg:text-xl">
                   <tr>
                     <th>Seat <sup id="sup"
@@ -535,7 +533,7 @@
                 </thead>
                 <tbody class="text-[#03071299] lg:text-xl font-medium "
                   id="table">
-                  
+
                 </tbody>
               </table>
               <!-- table end  -->
@@ -547,14 +545,16 @@
 
               </div>
               <div
-                class="flex justify-between font-inter font-medium lg:text-xl px-4 hidden" id="discountContainer">
+                class="flex justify-between font-inter font-medium lg:text-xl px-4 hidden"
+                id="discountContainer">
                 <p>Discount</p>
                 <p>BDT <span id="discount">00</span></p>
 
               </div>
               <div class="p-2 bg-white rounded-lg" id="cpnContainer">
                 <div class="flex justify-between gap-1">
-                  <input class="font-inter flex-1 rounded-md" id="coupon" type="text"
+                  <input class="font-inter flex-1 rounded-md" id="coupon"
+                    type="text"
                     placeholder="Have any copupon?" />
                   <button
                     class="btn text-white font-inter font-semibold rounded-lg bg-[#1DD100]"
@@ -576,7 +576,7 @@
 
               <label for>Passenger Name*</label> <br>
               <input type="text" placeholder="Enter your name"
-                class="input input-bordered w-full "  required  /><br>
+                class="input input-bordered w-full " required /><br>
               <label for>Phone Number*</label> <br>
               <input type="text" placeholder="Enter your phone number"
                 class="input input-bordered w-full " id="phone" required /><br>
@@ -588,6 +588,12 @@
               <button class="btn w-full rounded-2xl text-white bg-[#1DD100]"
                 id="next" onclick="my_modal_5.showModal()">Next</button>
 
+              <div
+                class="flex flex-col lg:flex-row justify-around text-[#03071299] font-inter items-center gap-2">
+                <a class="underline" href>Terms and Conditions</a><a
+                  class="underline" href>Cancellation Policy</a>
+              </div>
+
             </div>
 
           </div>
@@ -598,7 +604,37 @@
 
     </main>
     <!-- footer section  -->
-    <footer cl>
+    <footer class="bg-black">
+      <div class="container mx-auto w-[97%] lg:w-full text-white text-center md:text-left lg:text-left">
+
+        <div class="flex flex-col md:flex-row lg:flex-row justify-between mb-6 lg:mb-12 pt-12 lg:pt-24">
+          <div class="space-y-2 lg:space-y-4">
+            <h1 class="lg:text-4xl text-2xl font-extrabold font-raleway">M.M.-Ticket</h1>
+            <p class="max-w-sm text-[#FFFFFFCC] font-inter mx-auto">M.M.-Ticket is a digital platform to make your daily commuting better.</p>
+        </div>
+        <div class="space-y-2 lg:space-y-4">
+          <p class="font-raleway font-medium text-center pt-3 md:pt-0 lg:pt-0">Download our app</p>
+          <div class="flex justify-center items-center gap-2 p-2 glass cursor-pointer">
+            <img src="./images/playstore.png" alt="">
+            <div class="flex flex-col justify-center">
+              <p>GET IT NOW</p>
+              <h3 class="text-xl font-raleway font-semibold">Google Play</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-dashed">
+        <div class="flex flex-col lg:flex-row pb-16 pt-6 lg:pt-12 lg:pb-32 gap-0 lg:gap-2 lg:w-full">
+          <div class="lg:w-1/2 text-[#FFFFFFB3] mx-auto">
+            <p>@all rights reserved, M.M.-Ticket services limited.2024</p>
+          </div>
+          <div class="font-inter font-medium flex flex-col lg:flex-row flex-nowrap lg:flex-wrap justify-around lg:w-1/2 mx-auto text-center">
+            <p class="cursor-pointer">Terms & condition</p>
+            <p class="cursor-pointer">Return & refund policy</p>
+            <p class="cursor-pointer">Privacy policy</p>
+          </div>
+        </div>
+      </div>
 
     </footer>
 
@@ -621,9 +657,11 @@
         <div class="modal-action">
           <form method="dialog" class="w-1/2 mx-auto">
             <!-- if there is a button in form, it will close the modal -->
-            <button onclick="refresh()"
+            <button
               class="btn w-full rounded-2xl  text-white bg-[#27AE60]"
-              id="continue">Continue</button>
+              id="continue"> <a
+                class="w-full h-full w-full h-full flex justify-center items-center font-raleway"
+                href>Continue</a></button>
           </form>
         </div>
       </div>
