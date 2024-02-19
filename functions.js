@@ -1,18 +1,18 @@
 // capture
 const container = document.getElementById('seatsContainer');
 const buttons = container.getElementsByClassName('btn');
-const sup = document.getElementById('sup')
-const seatleft = document.getElementById('seat-left')
-const table = document.getElementById('table')
-const totalPrice = document.getElementById('total')
-const couponfield = document.getElementById('coupon')
-const couponbtn = document.getElementById('couponbtn')
-const grandTotal = document.getElementById('grand')
-const discountTotal = document.getElementById('discount')
-const discountContainer = document.getElementById('discountContainer')
-const cpnContainer = document.getElementById('cpnContainer')
-const next = document.getElementById('next')
-const phone = document.getElementById('phone')
+const sup = document.getElementById('sup');
+const seatleft = document.getElementById('seat-left');
+const table = document.getElementById('table');
+const totalPrice = document.getElementById('total');
+const couponfield = document.getElementById('coupon');
+const couponbtn = document.getElementById('couponbtn');
+const grandTotal = document.getElementById('grand');
+const discountTotal = document.getElementById('discount');
+const discountContainer = document.getElementById('discountContainer');
+const cpnContainer = document.getElementById('cpnContainer');
+const next = document.getElementById('next');
+const phone = document.getElementById('phone');
 // set
 let clicked = 0;
 let left = 40;
@@ -22,10 +22,9 @@ let discount = 0;
 couponfield.disabled = true;
 couponbtn.disabled = true;
 next.disabled = true;
-selected = false;
+let selected = false;
 
-
-// Define a named function to create elements and append to the table
+//appending
 function createAndAppendRow(button) {
 
     const tr = document.createElement('tr');
@@ -59,12 +58,12 @@ function createAndAppendRow(button) {
 
 
     selected = true;
-    // Remove the event listener after clicking once
+    
     button.removeEventListener('click', buttonClickHandler);
 
 }
 
-// Define a named function for the event handler
+//click function
 function buttonClickHandler() {
     if (clicked >= 4) {
 
@@ -74,26 +73,27 @@ function buttonClickHandler() {
     createAndAppendRow(button);
 }
 
-// Attach event listeners to buttons
+//each button
 for (const button of buttons) {
     button.addEventListener('click', buttonClickHandler);
 }
 
+//couponButton
 couponbtn.addEventListener('click', function () {
 
     if (couponfield.value === 'NEW15') {
-        discount = (total * 15) / 100
-        cpnContainer.classList.add('hidden')
+        discount = (total * 15) / 100;
+        cpnContainer.classList.add('hidden');
         discountContainer.classList.remove('hidden');
     }
     else if (couponfield.value === 'Couple 20') {
-        discount = (total * 20) / 100
-        cpnContainer.classList.add('hidden')
+        discount = (total * 20) / 100;
+        cpnContainer.classList.add('hidden');
         discountContainer.classList.remove('hidden');
     }
     else {
         discount = 0;
-        alert('Invalid Coupon')
+        alert('Invalid Coupon');
     }
 
     couponfield.value = '';
@@ -104,6 +104,8 @@ couponbtn.addEventListener('click', function () {
 
 
 })
+
+//next button
 
 phone.addEventListener('input', function () {
     if (!isNaN(phone.value) && selected === true && phone.value !== '') {
